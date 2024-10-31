@@ -1,5 +1,5 @@
 {
-	"printWidth": 180,
+	"printWidth": 140,
 	"useTabs": true,
 	"semi": true,
 	"singleQuote": true,
@@ -9,4 +9,5 @@
 	"bracketSpacing": true,
 	"arrowParens": "avoid",
 	"singleAttributePerLine": false
+{	"vscode_custom_css.imports": ["file:///C:UsersmaniaDocumentscustom.css"]}
 }
