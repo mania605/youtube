@@ -1,0 +1,83 @@
+.youtube {
+	article {
+		width: 100%;
+		border-bottom: 1px solid #ddd;
+		padding: 40px 0px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		h3 {
+			width: 30%;
+			font: 200 2vw/1.2 'raleway';
+			color: #111;
+		}
+		.txt {
+			width: 36%;
+			display: flex;
+			flex-wrap: wrap;
+			align-content: space-between;
+
+			p {
+				font: 1rem/1.3 'arial';
+				color: #999;
+				margin-bottom: 30px;
+				word-break: break-all;
+			}
+
+			span {
+				font: 400 0.8rem/1 'orbitron';
+				color: rgba(var(--keyRGB), 0.8);
+				letter-spacing: 1px;
+			}
+		}
+		.thumb {
+			width: 30%;
+			height: 10vw;
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.youtube {
+		article {
+			h3 {
+				width: 46%;
+				font-size: 3vw;
+			}
+			.txt {
+				width: 50%;
+
+				p {
+					font-size: 0.8rem;
+				}
+			}
+			.thumb {
+				width: 100%;
+				height: 20vw;
+				margin-top: 30px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.youtube {
+		article {
+			h3 {
+				width: 100%;
+				font-size: 5vw;
+				margin-bottom: 10px;
+				font-weight: 400;
+			}
+			.txt {
+				width: 100%;
+			}
+			.thumb {
+				width: 100%;
+				height: 30vw;
+				margin-top: 20px;
+			}
+		}
+	}
+}

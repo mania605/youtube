@@ -1,0 +1,167 @@
+.members {
+	.ceoBox {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 150px;
+
+		.txt {
+			width: 45%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			align-content: flex-end;
+			padding-bottom: 100px;
+			font-family: 'raleway';
+
+			h2 {
+				width: 100%;
+				text-align: right;
+				font-size: 2.4rem;
+			}
+			p {
+				width: 100%;
+				text-align: right;
+				font-size: 1.6rem;
+			}
+		}
+
+		.picWrapper {
+			width: 50% !important;
+		}
+	}
+
+	.memberListBox {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		.titBox {
+			width: 70%;
+
+			h2 {
+				font: 600 2rem/1 'orbitron';
+				color: #333;
+				letter-spacing: 1px;
+				margin-bottom: 20px;
+			}
+			p {
+				font: 300 1rem/1.2 'raleway';
+				color: #666;
+				margin-bottom: 50px;
+			}
+		}
+
+		ul {
+			width: 60%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			li {
+				width: 30%;
+				margin-bottom: 70px;
+
+				.pic {
+					width: 100%;
+					height: 15vw;
+					margin-bottom: 20px;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+
+				.txt {
+					h2 {
+						font: 700 1rem/1 'raleway';
+						margin-bottom: 10px;
+					}
+					p {
+						font-size: 0.6rem;
+					}
+				}
+			}
+		}
+
+		.descBox {
+			width: 28%;
+			display: flex;
+			flex-wrap: wrap;
+			align-content: center;
+			padding-bottom: 300px;
+
+			h2 {
+				font: 500 1.4rem/1 'orbitron';
+				color: #333;
+				margin-bottom: 30px;
+			}
+			p {
+				font-size: 1rem;
+				line-height: 1.3;
+				color: #777;
+				word-break: break-all;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.members {
+		.ceoBox {
+			.txt {
+				width: 100%;
+				padding-bottom: 30px;
+				justify-content: flex-start;
+
+				& > * {
+					text-align: left !important;
+				}
+
+				h2 {
+					font-size: 1.8rem;
+				}
+			}
+			.picWrapper {
+				width: 100% !important;
+				height: 45vh !important;
+			}
+		}
+		.memberListBox {
+			.titBox {
+				width: 100%;
+			}
+			ul {
+				width: 100%;
+			}
+			.descBox {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.members {
+		.ceoBox {
+			margin-bottom: 80px;
+			.picWrapper {
+				height: 30vh !important;
+			}
+		}
+		.memberListBox {
+			ul {
+				li {
+					width: 47%;
+					.pic {
+						height: 30vw;
+					}
+				}
+			}
+		}
+	}
+}

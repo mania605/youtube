@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+$tablet: 999px;
+$mobile: 599px;
+
+//4시 30분까지 아래와 같이 원하는 색상값을 css변수에 등록 후 각 페이지 원하는 부분에 연결
+:root {
+	--keyRGB: 40, 40, 40;
+}
+//rgba(var(--keyRGB), 0.5);
+//rgba(40,40,40,0.5);
+
+//black: 40,40,40
+//hotpink: 184, 0, 190;
+//blue: 0, 120, 150;
+
+//scss파일 없이 동적으로 제어되는 스타일을 css변수로 제어가 필요할때 클래스명 부여후 !import로 우선순위 높여줌
+.mask {
+	background-color: rgba(var(--keyRGB), 1) !important;
+}
+.maskText {
+	color: rgba(var(--keyRGB), 0.8) !important;
+}
+
+.test {
+	background: rgb(0, 120, 150);
+}
+
+//common
+@import './common/reset';
+@import './common/header';
+@import './common/footer';
+@import './common/layout';
+@import './common/modal';
+@import './common/mailForm';
+@import './common/map';
+@import './common/mobileMenu';
+
+//main
+@import './main/home';
+@import './main/visual';
+
+//sub
+@import './sub/members';
+@import './sub/youtube';
+@import './sub/youtubeDetail';
+@import './sub/gallery';
+
+/*
+  리액트 혹은 일반 js로 스타일 파일의 변수값을 제어하고자할때 일반 scss파일의 변수는 제어 불가
+  - scss파일은 실제 브라우저가 해석해서 적용하는 스타일 파일이 아닌 리액트 작업물 빌드시에 일반 브라우저가 해석 간능한 일반 css로 변경되는 구조
+  - 사용자가 이벤트를 통해서 변수 색상값을 변경요청하는 시점 이미 scss파일이 일반 css로 변환완료된 시점이므로 scss의 변수값을 제어의미없음
+
+  일반 css의 변수는 js나 리액트가 추후 동적으로 변경처리가능한 이유
+  - 일반 css는 브라우저가 실시간으로 해석해서 변수명까지 cssDOM형태로 관리하고 있기때문에 DOM script를 이용해서 css변수는 제어 가능
+*/
